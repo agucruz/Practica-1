@@ -7,6 +7,10 @@ secret_word = random.choice(words)
 # Número máximo de intentos permitidos
 max_attempts = 10
 
+#Se realiza la tercera modificacion del punto 7
+vocales = ["a","e","i","o","u"]
+accept = False
+
 #se realiza la segunda modificacion del punto 7
 fallos=0
 
@@ -14,9 +18,35 @@ fallos=0
 guessed_letters = []
 print("¡Bienvenido al juego de adivinanzas!")
 print("Estoy pensando en una palabra. ¿Puedes adivinar cuál es?")
-word_displayed = "_" * len(secret_word)
-# Mostrarla palabra parcialmente adivinada
-print(f"Palabra: {word_displayed}")
+
+
+#Se realiza la tercera modificacion del punto 7
+while accept == False
+
+dificultad = input("ingrese la dificultad: ").lower()
+
+if dificultad == facil
+  letras[]
+  guessed_letters.append(vocales)
+  for letra in secret_word
+    if letra in vocales
+      letras.append(letra)
+    else
+      letras.append("_")
+  word_displayed = "".join(letras)
+  print (f"Palabra: {word displayed}")
+  accept = true
+elif dificultad == media
+  word_displayed = f"{secret_word[0]}{"_" * (len(secret_word) - 2)}{secret_word[-1]}
+  guessed_letters.append(secret_word[0])
+  guessed_letters.append(secret_word[-1])
+  accept= true
+elif dificultad == dificil
+  word_displayed = "_" * len(secret_word)
+  print(f"Palabra: {word_displayed}")
+  accept = true
+else 
+  print("dificultad no valida.")
 
 
 #Se realiza la segunda modificacion del punto 7
